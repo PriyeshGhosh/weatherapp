@@ -1,7 +1,22 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+// const withPWA = require("next-pwa");
 
-module.exports = nextConfig
+const nextConfig = {
+  publicRuntimeConfig: {
+    apikey: process.env.API_KEY,
+    
+  },
+  reactStrictMode: true,
+  images: {
+    domains: ['images.unsplash.com', 'openweathermap.org']
+     
+
+  },
+  env: {
+    apikey: process.env.API_KEY,
+  },
+
+};
+
+module.exports = nextConfig;
+
